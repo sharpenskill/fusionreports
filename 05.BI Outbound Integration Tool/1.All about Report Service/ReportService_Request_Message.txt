@@ -1,0 +1,38 @@
+*********************************************
+**      BIP Automation SOAP Messages       **
+*********************************************
+WSDL: https://<host:port>/xmlpserver/services/v2/ReportService?wsdl
+Template Name: /Custom/Financials/XXDEMO_RTF_TEMPLATE.xdo
+
+Operation Name: runReport
+---------------------------
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v2="http://xmlns.oracle.com/oxp/service/v2">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v2:runReport>
+         <v2:reportRequest>
+            <v2:attributeFormat>pdf</v2:attributeFormat>
+            <v2:parameterNameValues>
+               <v2:listOfParamNameValues>
+                  <!--Zero or more repetitions:-->
+                  <v2:item>
+                     <v2:name>p_source</v2:name>
+                     <v2:values>
+                        <v2:item>ISP</v2:item>
+                     </v2:values>
+                  </v2:item>
+                  <v2:item>
+                     <v2:name>p_inv_num</v2:name>
+                     <v2:values>
+                        <v2:item>UK16</v2:item>
+                     </v2:values>
+                  </v2:item>
+               </v2:listOfParamNameValues>
+            </v2:parameterNameValues>
+            <v2:reportAbsolutePath>/Custom/Financials/XXDEMO_RTF_TEMPLATE.xdo</v2:reportAbsolutePath>
+         </v2:reportRequest>
+         <v2:userID>FIN_IMPL</v2:userID>
+         <v2:password>DayH33Ya7</v2:password>
+      </v2:runReport>
+   </soapenv:Body>
+</soapenv:Envelope>

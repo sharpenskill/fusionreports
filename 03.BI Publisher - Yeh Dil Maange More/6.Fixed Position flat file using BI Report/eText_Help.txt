@@ -1,0 +1,27 @@
+Case Study:
+------------
+1. We want to start a new payables invoice record with a hard coded value 'NEW'. which is of 3 characters.
+2. Next print a whitespace
+3. Next print Vendor Number/ Supplier Number which will span upto 15 characters, if vendor number is less than 15 characters then rest of the characters will be padded with whitespaces.
+4. Next print Invoice Number which span upto 30 characters, print the invoice number in all caps and if the length of invoice number is less than 30 characters, then rest of the characters will be padded with whitespaces.
+5. Now print invoice date in YYYYMMDD format which span upto 8 characters
+6. Next print a whitespace
+7. Now, print invoice amount which will span upto 15 characters and if the digits are less than 15 digits then it will be padded 0 before the original digits.
+8. Next print Invoice currency code which is of 3 characters
+
+SQL Query:
+-----------
+SELECT   PS.segment1                VENDOR_NUM
+       , AVA.invoice_num            INVOICE_NUM
+	   , AVA.invoice_date           INVOICE_DATE
+	   , AVA.invoice_amount         INVOICE_AMOUNT
+	   , AVA.invoice_currency_code  INVOICE_CURRENCY_CODE
+  FROM   ap_invoices_all AVA
+       , poz_suppliers PS
+ WHERE   AVA.vendor_id = PS.vendor_id
+
+Take Aways:
+-----------
+1. All SQL functions can be applied in data like TO_CHAR, TO_NUMBER, MAX, MIN, NVL, DECODE, UPPER, LOWER, COUNT, CEIL, ROUND, REPLACE etc.
+2. EText templates can also be used for character delimited files as well.
+3. Payment files, bank statements are created using eText templates

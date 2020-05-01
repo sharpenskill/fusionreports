@@ -1,0 +1,6 @@
+Take aways:
+
+1.If you login to BI Analytics and then try to open FRS report from EPM workspace then you will get error "these items must be accessed through epm workspace"
+Solution - Logout from BI analytics and then login to EPM workspace and run the FRS report
+
+2.If you are using any proxy setup to connect to the fusion instance, then follow the steps mentioned in the document “Proxy_setup_FRS.docx” which is available in the git hub

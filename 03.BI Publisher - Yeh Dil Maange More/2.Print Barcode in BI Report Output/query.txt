@@ -1,0 +1,40 @@
+Case Scenario - 
+
+1. Retrive 5 invoices of a supplier
+2. Supplier Name will be passed as parameter in the data model query
+3. Invoice Numbers will be hidden under barcode
+
+SQL Query of data model - 
+
+select aia.invoice_num
+	 , aia.description
+	 , aia.invoice_amount
+	 , aia.source
+	 , aia.invoice_type_lookup_code
+	 , aia.invoice_currency_code
+	 , fabuv.bu_name
+	 , pos.segment1 supp_number
+	 , hzp.party_name supp_name
+from  ap_invoices_all aia
+	, fun_all_business_units_v fabuv
+	, poz_suppliers pos
+	, hz_parties hzp
+where 1=1
+and aia.org_id = fabuv.bu_id
+and aia.vendor_id = pos.vendor_id
+and pos.party_id = hzp.party_id
+and hzp.party_name = :p_supplier_name
+and rownum <= 5
+
+
+
+
+
+
+SQL Query of LOV - 
+
+select hzp.party_name supp_name
+from  poz_suppliers pos
+	, hz_parties hzp
+where 1=1
+and pos.party_id = hzp.party_id

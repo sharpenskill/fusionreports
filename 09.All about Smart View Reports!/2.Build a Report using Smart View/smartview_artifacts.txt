@@ -1,0 +1,17 @@
+Main components of smart view:
+Ribbon
+Grid
+Panel
+POV
+
+Scenario:
+
+1.Display account balance based on period
+2.Use of Cascade property
+3.Add summation column in smart query
+4.copy smart query from sheet to another sheet
+5.Graph
+6.Use pre built function
+
+https://ucf1-zksn-fa-ext.oracledemos.com/workspace/SmartViewProviders
+

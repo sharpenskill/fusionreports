@@ -1,0 +1,25 @@
+SQL Query - 
+
+select aia.invoice_num
+	 , aia.description
+	 , aia.invoice_amount
+	 , aia.source
+	 , aia.invoice_type_lookup_code
+	 , aia.invoice_currency_code
+	 , fabuv.bu_name
+from  ap_invoices_all aia
+	, fun_all_business_units_v fabuv
+where 1=1
+and aia.org_id = fabuv.bu_id
+and rownum <=5
+
+
+
+
+XML Tag in excel template - XDO_?INVOICE_NUM?
+XDO_?DESCRIPTION?
+XDO_?SOURCE?
+XDO_?INVOICE_AMOUNT?
+XDO_?INVOICE_CURRENCY_CODE?
+XDO_?BU_NAME?
+Group Tag in excel template - XDO_GROUP_?G_1?

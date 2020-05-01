@@ -1,0 +1,10 @@
+Pre-requisties for PGP based Encryption:
+------------------------------------------
+1. Install GPG KeyGen Tool or Use Online
+2. PGP Keypair - Public Key and Private/Secret Key
+
+
+Important Links:
+-------------------
+https://pgpkeygen.com/
+https://www.gpg4win.org/

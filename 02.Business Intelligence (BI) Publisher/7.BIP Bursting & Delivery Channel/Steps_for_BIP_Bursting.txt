@@ -1,0 +1,101 @@
+Steps to implement bursting in BIP
+
+1. Add bursting query in the data model
+2. Schedule the report
+
+
+Delivery XML format - 
+
+<ROWSET>
+ <ROW>
+  <KEY></KEY> 
+  <TEMPLATE></TEMPLATE>    
+  <LOCALE></LOCALE> 
+  <OUTPUT_FORMAT></OUTPUT_FORMAT> 
+  <DEL_CHANNEL></DEL_CHANNEL>
+  <TIMEZONE></TIMEZONE>
+  <CALENDAR></CALENDAR> 
+  <OUTPUT_NAME></OUTPUT_NAME>
+  <SAVE_OUTPUT></SAVE_OUTPUT>
+  <PARAMETER1></PARAMETER1> 
+  <PARAMETER2></PARAMETER2> 
+  <PARAMETER3></PARAMETER3> 
+  <PARAMETER4></PARAMETER4> 
+  <PARAMETER5></PARAMETER5> 
+  <PARAMETER6></PARAMETER6> 
+  <PARAMETER7></PARAMETER7> 
+  <PARAMETER8></PARAMETER8> 
+  <PARAMETER9></PARAMETER9> 
+  <PARAMETER10></PARAMETER10>
+  </ROW>
+</ROWSET>
+
+
+EMAIL - 
+
+PARAMETER1: Email address
+
+PARAMETER2: cc
+
+PARAMETER3: From
+
+PARAMETER4: Subject
+
+PARAMETER5: Message body
+
+PARAMETER6: Attachment value ('true' or 'false')
+
+PARAMETER7: Reply-To
+
+PARAMETER8: Bcc (PARAMETER 9-10 are not used)
+
+
+
+FTP --
+
+PARAMETER1: Server name PARAMETER2: Username
+
+PARAMETER3: Password
+
+PARAMETER4: Remote Directory
+
+PARAMETER5: Remote File Name
+
+PARAMETER6: Secure (set this value to 'true' to enable Secure FTP)
+
+(PARAMETER 7-10 are not used)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+select a.VENDOR_ID  KEY, 
+'test_supp' TEMPLATE,
+'en-US' LOCALE, 
+'PDF' OUTPUT_FORMAT, 
+'Supplier Details'  OUTPUT_NAME,
+'EMAIL' DEL_CHANNEL,
+'raja.aeccrj@gmail.com' PARAMETER1,
+'raja.aeccrj@gmail.com' PARAMETER2,
+'bipublisher-report@oracle.com' PARAMETER3,
+'Supplier Details'  PARAMETER4,
+'Please find the attached file'  PARAMETER5,
+'true' PARAMETER6,
+'donotreply@oracle.com' PARAMETER7 
+from poz_suppliers a

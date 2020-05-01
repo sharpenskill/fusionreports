@@ -1,0 +1,5 @@
+ESS Metalink Notes:
+--------------------
+How To Create Custom ESS Parameter LOV using Lookup Codes? (Doc ID 1947723.1)		
+How To Create List Of Values For ESS Job Parameters in Fusion Cloud Environment (Doc ID 2060570.1)
+How to Create Dependent LOV Parameters for Custom ESS Jobs Using Value Sets? (Doc ID 2173057.1)

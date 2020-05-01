@@ -1,0 +1,1 @@
+Oracle Fusion Technical - BI,OTBI,BICC,FRS, SmartView & More

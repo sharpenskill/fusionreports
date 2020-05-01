@@ -1,0 +1,18 @@
+- Remove the existing "JAX-WS" libraries from your project
+- From the JDev menu, choose Tools - Manage Libraries
+- From the left side, choose New
+- In the new window enter a new library name "My JAX-WS Client"
+- Click on Add entry, and select
+	<your_jdev_home>\wlserver\server\lib\weblogic.jar
+	<your_jdev_home>\oracle_common\modules\internal\features\jrf_wlsFmw_oracle.jrf.wls.classpath.jar
+- Click on OK
+- Click "New" again and enter a new library name "My JAX-WS Web Service"
+- Click on Add entry, and select
+	<your_jdev_home>\wlserver\server\lib\weblogic.jar
+- Click on OK twice
+- Open your project properties and in the "Libraries and Classpath" page, click on "Add Library" and select your newly created libraries
+- When run, the java should now work.
+ 
+If more than one library has problems, you will need to repeat the process.
+We have detected the same problem in "Weblogic 12.1 Remote-Client". This library needs the same jar as used before:
+	<your_jdev_home>\wlserver\server\lib\weblogic.jar

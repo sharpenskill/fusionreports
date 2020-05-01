@@ -1,0 +1,55 @@
+----------------------------
+STEPS to create an extract:
+----------------------------
+1. Plan the extract. To me this is very crucial and important step before you actually create the extract. Now, in order to plan first you have to plan which all columns/ fields from which all database tables and the corresponding Public View Objects, in short Public VOs. Typically the VO names end with PVO are the public VOs.
+2. The user will have to create a custom offering and then associate data store which can comprise of one or more public VOs and then the columns
+3. Then create a job and select the offering and then check the data stores for which data needs to be extracted. PVOs can be customized at Job level. 
+4. Next create a schedule for the job and provide recurrence, notification, file parameters details. That’s it. Now extract files will be generated corresponding to each VOs in UCM along with a manifest file which enlists the extracted filenames.
+
+----------------------------
+View Objects Considered:
+----------------------------
+FscmTopModelAM.FinApInvTransactionsAM.InvoiceHeaderPVO
+FscmTopModelAM.FinApInvTransactionsAM.InvoiceLinePVO
+
+-----------------
+Query to find BU
+-----------------
+SELECT * from fun_all_business_units_v where bu_name like 'US%' -- 300000046987012
+
+----------------------------
+Important Terms:
+----------------------------
+Disable Effective Date Filter ---> Enable this option if there is a requirement to extract all historical records. Note that the VO not validated as being effective dated in nature, so set this option only after confirming the nature of the data
+
+Extract Data Store Metadata ---> Enable this option to extract data store metadata with the job, for example attribute definitions. 
+
+Silent Error - Default is to use silent error. Deselect to allow errors.
+
+Use OTBI metadata dependent extract ---> Select to use OTBI Metadata Dependent Mode for the data store. The default, OTBI Metadata Independent Mode, allows extraction without a dependency for BIVO metadata in the BI repository(RPD).
+
+Use UNION ALL for incremental extract ---> The default incremental extract strategy is to use OR. Select this option to use UNION ALL.
+
+Query Filter ---> Specify a query to filter the data.
+
+Support Chunking ---> Chunk data for large data VOs, splitting the output into chunks by initial extract date, creation date, or primary key. Set an Initial Extract date to filter data on that date for data store columns defined as Creation Date, and select the preferred chunking option in the Support Chunking list.
+
+Prune time ---> in Minutes Default BICC incremental job will add a look back timeframe as defined in Prune time setting. Since the extraction is done on live Applications DB and not a snapshot, look back/prune time is best practice to ensure dependency synchronization across objects. Default works best for extracts with daily or higher reoccurrence. Prune time should be adjusted when extracts are scheduled more frequently or if downstream system can handle objects extracted in any order.
+
+----------------------------
+Take Aways:
+----------------------------
+1. In FSCM Cloud, we can't create any custom View Object
+2. We have to use only Public VOs which ends with PVO
+3. We don't have any provision to establish join among VOs
+4. Extracts can be Full or Incremental. First time it's always Full, next time onwards it's incremental but can be reset to full extract anytime.
+5. BICC View Objects can be compared to Subject Areas in OTBI space.
+6. The download of extracts can be automated by invoking Web Service or by writing Java code. Please refer the Appendix section to see how to automate the download of extracts from UCM by invoking web service.
+
+
+----------------------------
+Metalink Notes:
+----------------------------
+BI Cloud Connector: How to Find Information About Objects and Attributes for Extraction? (Doc ID 2506210.1)
+https://cloudcustomerconnect.oracle.com/posts/c6614f9d47
+https://www.ateam-oracle.com/bi-cloud-connector-deletion-of-data-extract-files-on-ucm#UCMTransferUtil.sh

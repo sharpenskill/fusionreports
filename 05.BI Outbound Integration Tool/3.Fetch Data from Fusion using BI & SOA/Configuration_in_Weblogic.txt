@@ -1,0 +1,20 @@
+Configuration in Weblogic:
+---------------------
+1. HostName Verification: None
+Navigation: Environment > Servers > Click on Server Name link > Click on SSL Tab > Click on Advanced > Find for field HostName Verification
+2. Import certificates in DemoTrust.jks
+DemoTrust import
+--------------------
+keytool -importcert -trustcacerts -alias DigiCert -file "C:\\Users\\Raja Dutta\\Desktop\\DigiCert.cer" -keystore "E:\\FMW\\SOASUITE\\wlserver\\server\\lib\\DemoTrust.jks" -storepass DemoTrustKeyStorePassPhrase
+keytool -importcert -trustcacerts -alias IntermediateCert -file "C:\\Users\\Raja Dutta\\Desktop\\Intermediate.cer" -keystore "E:\\FMW\\SOASUITE\\wlserver\\server\\lib\\DemoTrust.jks" -storepass DemoTrustKeyStorePassPhrase
+keytool -importcert -trustcacerts -alias OracleDemosCert -file "C:\\Users\\Raja Dutta\\Desktop\\oracledemos.cer" -keystore "E:\\FMW\\SOASUITE\\wlserver\\server\\lib\\DemoTrust.jks" -storepass DemoTrustKeyStorePassPhrase
+
+3. Import certificates in cacerts
+cacerts import ((changeit))
+-----------------------------
+keytool -importcert -trustcacerts -alias DigiCert -file "C:\\Users\\Raja Dutta\\Desktop\\DigiCert.cer" -keystore E:\FMW\JDK\jre\lib\security\cacerts 
+keytool -importcert -trustcacerts -alias IntermediateCert -file "C:\\Users\\Raja Dutta\\Desktop\\Intermediate.cer" -keystore E:\FMW\JDK\jre\lib\security\cacerts
+keytool -importcert -trustcacerts -alias OracleDemosCert -file "C:\\Users\\Raja Dutta\\Desktop\\oracledemos.cer" -keystore E:\FMW\JDK\jre\lib\security\cacerts
+
+4. Create Credentials for Fusion Instance in Credentials Store 
+Navigation Weblogic Domain > Security > Credentials > Create Map (oracle.wsm.security) and under the same map Create Key(FusionCreds)

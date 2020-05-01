@@ -1,0 +1,10 @@
+Business Intelligence(BI) Publisher
+-------------------------------------
+1.BI Roles & Configuration
+2.Develop First BI Report
+3.BIP Report with Parameters
+4.Export BIP Report Output
+5.BI Report Migration
+6.Master Details BI Report
+7.BIP Bursting & Delivery Channel
+8.Secure BI Report

@@ -1,0 +1,8 @@
+1.Text Box
+2.Graph
+3.Custom Summation column
+4.Formula
+
+
+<<MemberName("GridName", Row/Col/Page, "DimName")>>
+<<POVAlias("GridName", Currency)>>

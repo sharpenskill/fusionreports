@@ -1,0 +1,4 @@
+SmartView:
+-------------
+1.All about Smart View Reports!
+2.Build a Report using Smart View

@@ -1,0 +1,5 @@
+Fusion URL: https://ucf5-zksm-fa-ext.oracledemos.com/
+Fusion Analytics URL: https://ucf5-zksm-fa-ext.oracledemos.com/analytics
+
+SELECT name,language from ap_terms_tl
+

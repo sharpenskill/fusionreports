@@ -1,0 +1,5 @@
+BI Outbound Integration Tool
+------------------------------------------
+1.All about Report Service
+2.Fetch Data from Fusion using BI & Java
+3.Fetch Data from Fusion using BI & SOA

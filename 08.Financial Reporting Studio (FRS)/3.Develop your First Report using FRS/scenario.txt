@@ -1,0 +1,7 @@
+Scenario:
+
+1.Display account balance based on the accounting period (PTD)
+2.Select account and accounting period dimension from POV
+3.Select members
+4.Pass accounting period as parameter
+5.Compare the balance amount of two accounting periods

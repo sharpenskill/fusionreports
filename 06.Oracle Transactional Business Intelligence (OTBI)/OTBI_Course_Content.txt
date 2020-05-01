@@ -1,0 +1,10 @@
+Oracle Transactional Business Intelligence (OTBI):
+---------------------------------------------------
+1.Getting Started with OTBI
+2.OTBI Analysis - Tabular Representation
+3.OTBI Analysis - Graphical Representation
+4.Create Dashboard using OTBI
+5.Create Drill Down Report using OTBI
+6.Create BI Report using OTBI Analysis
+7.All about OTBI Report Security
+8.Create Infolet using OTBI Analysis

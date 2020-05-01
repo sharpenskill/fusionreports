@@ -1,0 +1,43 @@
+Case Scenario - 
+
+1. Business Unit's address will be displayed in the report based on the business unit name passed in the parameter and that address details will be available in the sub template.
+2. Create RTF template and register that template as sub template in BIP catalog
+3. Call the sub template in the main template
+
+SQL Query of data model - 
+
+select aia.invoice_num
+	 , aia.description
+	 , aia.invoice_amount
+	 , aia.source
+	 , aia.invoice_type_lookup_code
+	 , aia.invoice_currency_code
+	 , fabuv.bu_name
+	 , pos.segment1 supp_number
+	 , hzp.party_name supp_name
+from  ap_invoices_all aia
+	, fun_all_business_units_v fabuv
+	, poz_suppliers pos
+	, hz_parties hzp
+where 1=1
+and aia.org_id = fabuv.bu_id
+and aia.vendor_id = pos.vendor_id
+and pos.party_id = hzp.party_id
+and fabuv.bu_name = :p_bu_name
+and rownum <= 5
+
+
+
+
+
+
+SQL Query of LOV - 
+
+select fabuv.bu_name
+from  fun_all_business_units_v fabuv
+
+
+
+
+India Business Unit 01
+US1 Business Unit

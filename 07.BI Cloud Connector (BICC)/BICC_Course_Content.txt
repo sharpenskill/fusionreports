@@ -1,0 +1,7 @@
+BI Cloud Connector (BICC)
+--------------------------
+1.BICC – What is this??
+2.Get Ready with BICC
+3.Create your first BICC Extract(Full)
+4.Run for Incremental Extracts
+5.Secure your BICC Extract

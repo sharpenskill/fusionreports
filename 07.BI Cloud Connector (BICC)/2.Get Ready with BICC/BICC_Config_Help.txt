@@ -1,0 +1,27 @@
+----------------------
+Roles Configuration:
+----------------------
+A. Provisioning a User for BI Cloud Connector Console Access
+Role Code: BIACM_ADMIN
+Role Name: BIACM_ADMIN
+Role Type: BI - Abstract Roles
+Roles Hierarchy - 
+1. ESS Administrator Role(ESSAdmin)
+2. Application Implementation Administrator(ORA_ASM_APPLICATION_IMPLEMENTATION_ADMIN_ABSTRACT)
+
+B. Provision a User to Access BI Cloud Connector Content in Universal Content Management
+Role Code: BICC_UCM_CONTENT_ADMIN 
+Role Name: BICC_UCM_CONTENT_ADMIN 
+Role Type: BI - Abstract Roles
+Roles Hierarchy - 
+1. Upload and download data from on-premise system to cloud system(OBIA_EXTRACTTRANSFORMLOAD_RWD)
+
+----------
+URLs:
+----------
+https://<POD>/biacm
+https://<POD>/cs
+
+e.g.
+https://ucf1-zksn-fa-ext.oracledemos.com/biacm
+https://ucf1-zksn-fa-ext.oracledemos.com/cs

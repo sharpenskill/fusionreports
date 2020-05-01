@@ -1,0 +1,15 @@
+Scenario:
+
+1. Customize AR Invoice Print Report
+2. Add Payment term description column in data model
+3. Add 2 new fields in the report output - term name and term description in the header section of the report
+
+Take aways:
+
+1. Though we can modify report template and data model query, but we cannot validate data using PL/SQL package like EBS system.
+2. Fusion SaaS does not provide access to database, so we can't use of fusion database or can't call any database related custom program unit in report trigger.
+3. We can't modify or hide the parameters used in standard report.
+4. You must provide the values of flexfield. Those are actually lexical references in the report query.
+&P_DYNAMIC_FROM_CLAUSE = ,dual
+&P_DYNAMIC_WHERE_CLAUSE1 = 1=1 and
+&P_DYNAMIC_ORDER_BY_CLAUSE = order by 1

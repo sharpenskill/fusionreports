@@ -1,0 +1,7 @@
+----------------------------
+STEPS to create an extract:
+----------------------------
+1. Plan the extract. To me this is very crucial and important step before you actually create the extract. Now, in order to plan first you have to plan which all columns/ fields from which all database tables and the corresponding Public View Objects, in short Public VOs. Typically the VO names end with PVO are the public VOs.
+2. The user will have to create a custom offering and then associate data store which can comprise of one or more public VOs and then the columns
+3. Then create a job and select the offering and then check the data stores for which data needs to be extracted. PVOs can be customized at Job level. 
+4. Next create a schedule for the job and provide recurrence, notification, file parameters details. That’s it. Now extract files will be generated corresponding to each VOs in UCM along with a manifest file which enlists the extracted filenames.

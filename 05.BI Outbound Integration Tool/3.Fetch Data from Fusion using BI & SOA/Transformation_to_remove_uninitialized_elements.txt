@@ -1,0 +1,8 @@
+Transformation to remove all empty elements:
+----------------------------------------------
+<xsl:template match="node()|@*">
+      <xsl:copy>
+         <xsl:apply-templates select="node()|@*"/>
+      </xsl:copy>
+   </xsl:template>
+   <xsl:template match="*[not(@*|*|comment()|processing-instruction())       and normalize-space()=''       ]"/>

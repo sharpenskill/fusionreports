@@ -1,0 +1,9 @@
+BI - Yeh Dil Maange More
+ -- BI Report using Excel Template
+ -- Print Barcode in BI Report Output
+ -- Secure your PDF Report Output
+ -- SubTemplates in Fusion BI
+ -- Explore different features of RTF Template
+ -- Fixed Position flat file using BI Report
+ -- Generate BI Report Output in Multi-Languages
+ -- Customize Standard BI Report
