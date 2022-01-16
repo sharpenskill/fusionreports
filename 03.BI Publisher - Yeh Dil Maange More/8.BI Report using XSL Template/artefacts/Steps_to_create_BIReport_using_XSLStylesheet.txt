@@ -1,0 +1,7 @@
+BI Report using XSL StyleSheet
+  - Create a Data Model
+  - Define the Parent Child relationship in the data model
+  - Save the data model's sample output
+  - If required, export the output - XML
+  - Develop the XSL StyleSheet
+  - Create the Report Template

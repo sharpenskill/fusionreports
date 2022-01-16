@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SalesOrders>
+   <SalesOrder>
+      <OrderNum>6192</OrderNum>
+      <OrderId>300000069266732</OrderId>
+      <OrderType />
+      <StatusCode>OPEN</StatusCode>
+      <OrderDate>2014-03-10T12:58:38.000+00:00</OrderDate>
+      <CurrencyCode>EUR</CurrencyCode>
+      <SOLines>
+         <SOLine>
+            <LineNumber>1</LineNumber>
+            <Item>AS85000</Item>
+            <ItemDesc>Green Server 1000</ItemDesc>
+            <OrderUOM>zzu</OrderUOM>
+            <UnitListPrice>5698</UnitListPrice>
+            <UnitSellingPrice>5698</UnitSellingPrice>
+            <Fulfillment>
+               <FulfillmentLineNum>1</FulfillmentLineNum>
+               <OrderQuantity>1</OrderQuantity>
+               <LinePrice>5698</LinePrice>
+               <FulfillStatusCode>BILLED</FulfillStatusCode>
+               <FulfilledQty>1</FulfilledQty>
+            </Fulfillment>
+         </SOLine>
+         <SOLine>
+            <LineNumber>2</LineNumber>
+            <Item>AS85000</Item>
+            <ItemDesc>Green Server 1000</ItemDesc>
+            <OrderUOM>zzu</OrderUOM>
+            <UnitListPrice>5698</UnitListPrice>
+            <UnitSellingPrice>5698</UnitSellingPrice>
+            <Fulfillment>
+               <FulfillmentLineNum>1</FulfillmentLineNum>
+               <OrderQuantity>1</OrderQuantity>
+               <LinePrice>5698</LinePrice>
+               <FulfillStatusCode>BILLED</FulfillStatusCode>
+               <FulfilledQty>1</FulfilledQty>
+            </Fulfillment>
+         </SOLine>
+      </SOLines>
+   </SalesOrder>
+</SalesOrders>
